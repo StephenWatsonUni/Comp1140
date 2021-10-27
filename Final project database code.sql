@@ -358,5 +358,3 @@ WHERE YEAR(l.dateTimeBorrowed) = '2020' AND c.name = 'Camera' AND m2.model = '15
 SELECT TOP (1) name, l.moveableResourceId FROM MoveableResource m RIGHT JOIN Loan l ON m.resourceId = l.moveableResourceId 
 WHERE MONTH(l.dateTimeBorrowed) = MONTH(GETDATE())
 GROUP BY name, l.moveableResourceId ORDER BY COUNT(l.moveableResourceId) DESC;
-
---6
